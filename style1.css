@@ -4,7 +4,8 @@ body {
 }
 
 .container {
-  width: 1440px;
+  width: 100%;
+  height: 804px;
   margin: 0 auto;
   position: relative;
 }
@@ -64,7 +65,8 @@ a.icon {
   padding: 15px 30px;
 }
 
-.second-container p, h2{
+.second-container p,
+h2 {
   color: black;
   text-align: left;
 }
@@ -72,7 +74,8 @@ a.icon {
 
 .sec1 {
   background: url("images/first.jpg");
-  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 
@@ -91,8 +94,7 @@ a.icon {
 }
 
 .whatwedo-container {
-  
-  width: 1440px;
+  width: 100%;
   height: 600px;
   background-color: #33292a;
 }
@@ -108,6 +110,29 @@ a.icon {
 p {
   color: #fff;
   text-align: center;
+}
+
+.whatwedo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  font-size: 24px;
+  color: #fff;
+  justify-items: center;
+  text-align: center;
+  gap: 20px;
+  margin-top: 148px;
+}
+
+.whatwedo-grid img {
+  width: 80px;
+  height: 80px;
+}
+
+.whatwedo-grid h3 {
+  color: #fff;
+  font-size: 24px;
+  margin: 0;
 }
 
 @media screen and (width <=768px) {
