@@ -12,95 +12,115 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style1.css">
 </head>
+<script>
+  function toggleMenu() {
+    var nav = document.getElementById("myTopnav");
+    if (nav.className === "topnav") {
+      nav.className += " responsive";
+    } else {
+      nav.className = "topnav";
+    }
+  }
+</script>
 
 <body>
-
-  <nav class="container">
-    <div class="topnav">
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#whatwedo">What We Do</a></li>
-      <li><a href="#trips">Our Trips</a></li>
-      <li><a href="#where">Where to go</a></li>
-      <li><a href="#reviews">Reviews</a></li>
+  <div class="topnav" id="myTopnav">
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#whatwedo">What We Do</a></li>
+    <li><a href="#trips">Our Trips</a></li>
+    <li><a href="#where">Where to go</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <section class="sec1" id="sec1">
+    <div class="container-text container">
+      <h1>Your<br>Travel<br>Assistant</h1>
     </div>
-    <section class="container sec1" id="sec1">
-      <div class="container-text">
-        <h1>Your Travel Assistant</h1>
+  </section>
+
+  <section id="about" class="about">
+    <div class="about container">
+      <h2>About Us</h2>
+      <img src="images/second.jpg" alt="About Us">
+      <p>
+        Leigh McAdam is a Calgary-based writer, photographer and social media enthusiast with over 48,000 followers.
+        Her blog: HikeBikeTravel is frequently cited as one of the top travel and outdoor adventure blogs in Canada,
+        and
+        consistently receives over 135,000 monthly page views. She shares her enthusiasm for the outdoors as a brand
+        ambassador for Sporting Life, and has worked on campaigns for Travel Alberta, Expedia and Flight Hub. Leigh is
+        the author of Discover Canada: 100 Inspiring Outdoor Adventures. Currently, she is co-authoring: 125 Nature
+        Hot Spots in Alberta (spring 2018). A true adventurer, Leigh will try anything once, except
+      </p>
+
+
+    </div>
+  </section>
+
+  <section id="whatwedo" class="whatwedo-container ">
+    <div class="whatwedo-text-container container">
+      <h2>What We Do</h2>
+      <p>Opportunities for challenging hikes and pleasant strolls are scattered all over this planet; you just need to
+        know where to find them. We do. Kilimanjaro, Everest Base Camp, Patagonia, and the Inca Trail are out there,
+        waiting for you to walk all over them. We’re proud of our record of successful ascents (over 92% of our
+        travellers make it to the top of Kili, depending on the route), but it’s our CEOs and local guides that make
+        the
+        journey itself as memorable as the summit. And if you’re not into big climbs, don’t sweat it; we’ve got loads
+        of
+        lower-impact walks and iconic treks you’ll love, too.</p>
+      <div class="whatwedo-grid">
+        <img src="images/hiking-white.png" alt="hiking">
+        <img src="images/cycle-white.png" alt="cycle">
+        <img src="images/water-white.png" alt="water">
+        <img src="images/car-white.png" alt="car">
+        <h3>Hiking</h3>
+        <h3>Cycling</h3>
+        <h3>Surfing</h3>
+        <h3>Car trips</h3>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="about">
+  <section id="trips">
+    <div class="trips-grid container">
+      <div class="trips-item"><img src="images/hory.jpg"></div>
+      <div class="trips-item"><img src="images/jezero1.jpg"></div>
+      <div class="trips-item"><img src="images/lesik.jpg"></div>
 
-      <div class="second-container">
+      <div class="trips-item"><img src="images/hory2.jpg"></div>
+      <div class="trips-item trips-center">
+        <h2>
+          Our Trips
+        </h2>
+      </div>
+      <div class="trips-item"><img src="images/jezero2.jpg"></div>
 
-        <img src="images/second.jpg" alt="About Us">
-        <h2>About Us</h2>
+      <div class="trips-item"><img src="images/hvezdicky.jpg"></div>
+      <div class="trips-item"><img src="images/stan.jpg"></div>
+      <div class="trips-item"><img src="images/kyticky.jpg"></div>
+
+
+  </section>
+
+  <section id="where" class="where">
+    <div class="where-container container">
+      <h2>Where do you want to go?</h2>
+      <div class="where-content">
         <p>
-          Leigh McAdam is a Calgary-based writer, photographer and social media enthusiast with over 48,000 followers.
-          Her blog: HikeBikeTravel is frequently cited as one of the top travel and outdoor adventure blogs in Canada,
-          and
-          consistently receives over 135,000 monthly page views. She shares her enthusiasm for the outdoors as a brand
-          ambassador for Sporting Life, and has worked on campaigns for Travel Alberta, Expedia and Flight Hub. Leigh is
-          the author of Discover Canada: 100 Inspiring Outdoor Adventures. Currently, she is co-authoring: 125 Nature
-          Hot Spots in Alberta (spring 2018). A true adventurer, Leigh will try anything once, except
+          You'll find 21 detailed adventure guides, over a hundred practical travel tips, book reviews on anything
+          outdoors related, packing lists on a range of outdoor activities including kayaking, backpacking and camping
+          as well as honest hotel and B&B reviews.
         </p>
+        <p>Contact us and we will help you!</p>
+        <button>CONTACT US</button>
       </div>
-    </section>
-
-    <section id="whatwedo" class="whatwedo-container">
-      <div class="whatwedo-text-container">
-        <h2>What We Do</h2>
-        <p>Opportunities for challenging hikes and pleasant strolls are scattered all over this planet; you just need to
-          know where to find them. We do. Kilimanjaro, Everest Base Camp, Patagonia, and the Inca Trail are out there,
-          waiting for you to walk all over them. We’re proud of our record of successful ascents (over 92% of our
-          travellers make it to the top of Kili, depending on the route), but it’s our CEOs and local guides that make
-          the
-          journey itself as memorable as the summit. And if you’re not into big climbs, don’t sweat it; we’ve got loads
-          of
-          lower-impact walks and iconic treks you’ll love, too.</p>
-        <div class="whatwedo-grid">
-          <img src="images/hiking-white.png" alt="">
-          <img src="images/cycle-white.png" alt="">
-          <img src="images/water-white.png" alt="">
-          <img src="images/car-white.png" alt="">
-          <h3>Hiking</h3>
-          <h3>Cycling</h3>
-          <h3>Surfing</h3>
-          <h3>Car trips</h3>
-        </div>
-      </div>
+    </div>
+  </section>
 
 
-
-    </section>
-
-    <section id="trips">
-
-      <div class="trips-grid">
-        <div class="trips-item"><img src="images/hory.jpg"></div>
-        <div class="trips-item"><img src="images/jezero1.jpg"></div>
-        <div class="trips-item"><img src="images/lesik.jpg"></div>
-
-        <div class="trips-item"><img src="images/hory2.jpg"></div>
-        <div class="trips-item trips-center">Our Trips</div>
-        <div class="trips-item"><img src="images/jezero2.jpg"></div>
-
-        <div class="trips-item"><img src="images/hvezdicky.jpg"></div>
-        <div class="trips-item"><img src="images/stan.jpg"></div>
-        <div class="trips-item"><img src="images/kyticky.jpg"></div>
-
-
-    </section>
-
-    <section id="where">
-
-
-    </section>
-
-
-    <section id="reviews" class="reviews">
-
-
+  <section id="reviews" class="reviews">
+    <div class="container">
       <h2>Reviews</h2>
 
       <p class="reviews-intro">
@@ -110,6 +130,7 @@
         smiling all day long. Here is just a sampling of
         what they’ve said:
       </p>
+
 
       <div class="reviews-grid">
 
@@ -146,10 +167,10 @@
           <p class="review-name">Frank KinneyFooter</p>
         </div>
       </div>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="gallery">
+  <section class="gallery">
     <img src="images/plazicka.jpg">
     <img src="images/skala.jpg">
     <img src="images/jezero3.jpg">
@@ -160,8 +181,6 @@
     <a>Contact</a>
     <p>© 2022 - Your Travel Assistant. All Rights Reserved.</p>
   </footer>
-
-
 </body>
 
 </html>
