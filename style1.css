@@ -64,25 +64,35 @@
   }
 
   .about {
-    width: 856px;
-    height: 400px;
-    flex-flow: column wrap;
-    margin: 0 auto;
+    padding: 90px 0;
+    background: #fff;
   }
 
-  .about img {
-    float: right;
-    width: 444px;
-    height: 297px;
+  .about-inner {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 64px;
+    align-items: start;
 
   }
 
-  .about p,
-  h2 {
-    color: black;
+
+  .about-left h2 {
+    margin: 0 0 18px;
     text-align: left;
   }
 
+  .about-left p {
+    margin: 0;
+    max-width: 560px;
+  }
+
+  .about-right img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+  }
 
   .sec1 {
     background: url("images/first.jpg");
@@ -98,14 +108,14 @@
 
 
   .container-text {
+    padding-top: 180px;
     text-align: right;
     bottom: 11vh;
     right: 10vw;
-    position: absolute;
   }
 
   .container-text h1 {
-    font-size: 96px;
+    font-size: 69px;
     color: rgb(255, 255, 255);
     z-index: 1;
   }
@@ -115,16 +125,20 @@
     width: 100%;
     height: 600px;
     background-color: #33292a;
+    padding: 80px;
+  }
+
+  .whatwedo-container h2 {
+    padding-bottom: 25px;
   }
 
   .whatwedo-text-container {
     margin: 0 auto;
-    padding-top: 30px;
     height: 170px;
   }
 
   .whatwedo-text-container h2,
-  p {
+  .whatwedo-text-container p {
     color: #fff;
     text-align: center;
   }
@@ -138,7 +152,7 @@
     justify-items: center;
     text-align: center;
     gap: 20px;
-    margin-top: 148px;
+    margin-top: 100px;
   }
 
   .whatwedo-grid img {
@@ -160,7 +174,6 @@
     max-width: 856px;
     margin: 0 auto;
     padding: 30px 0;
-
   }
 
   .trips-item {
@@ -191,14 +204,14 @@
     justify-content: center;
     padding: 60px 20px;
     color: #fff;
-
   }
 
   .where-container {
-    max-width: 1200px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     gap: 60px;
+    align-items: flex-start;
   }
 
   .where-container h2 {
@@ -244,8 +257,9 @@
   }
 
   .reviews h2 {
+    margin-top: 50px;
     font-size: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     text-align: center;
   }
 
@@ -275,8 +289,7 @@
 
   .review-text {
     max-width: 430px;
-    min-height: 220px;
-    margin-bottom: 30px;
+    min-height: 190px;
     color: #000;
   }
 
@@ -288,7 +301,8 @@
   }
 
   .review-name {
-    font-weight: 700;
+    font-weight: bold;
+    margin-bottom: 100px;
   }
 
   .gallery {
@@ -318,11 +332,10 @@
   }
 
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
 
     * {
       box-sizing: border-box;
-      margin: 0;
     }
 
     body {
@@ -378,6 +391,7 @@
       display: flex;
       justify-content: flex-end;
       align-self: end;
+      padding: 40px;
     }
 
     .container-text h1 {
@@ -387,27 +401,39 @@
 
 
     .about {
+      padding: 50px 50px;
+    }
+
+    .about-inner {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .about-left {
+      text-align: left;
+    }
+
+    .about-left h2 {
+      font-size: 38px;
+      line-height: 1.1;
+      margin: 0 0 12px;
+      text-align: left;
+    }
+
+    .about-left p {
+      font-size: 16px;
+      line-height: 1.65;
+      margin: 0;
+      max-width: none;
+      text-align: left;
+    }
+
+    .about-right img {
       width: 100%;
       height: auto;
-      padding: 32px 16px;
-      display: flex;
-      flex-direction: columnss;
+      object-fit: cover;
+      margin: 0 auto;
     }
-
-    .about img {
-      float: none;
-      width: 100%;
-      height: auto;
-      padding: 0;
-      margin-bottom: 20px;
-      order: 1;
-    }
-
-    .about h2 {
-      margin-bottom: 16px;
-    }
-
-
 
     .whatwedo-container {
       height: auto;
@@ -531,7 +557,7 @@
 
     .reviews {
       max-width: 100%;
-      padding: 32px 16px 40px;
+      padding: 22px 16px 10px;
     }
 
     .reviews h2 {
@@ -556,6 +582,10 @@
       min-height: auto;
     }
 
+    .review-name {
+      padding-top: 20px;
+    }
+
     .gallery {
       grid-template-columns: 1fr;
     }
@@ -566,21 +596,24 @@
     }
   }
 
-  @media screen and (min-width: 769px) and (max-width: 992px) {
+  @media screen and (min-width: 768px) and (max-width: 992px) {
     * {
       box-sizing: border-box;
-      margin: 0;
     }
 
     body {
       font-size: 16px;
       margin: 0;
       width: 100%;
+      display: block;
     }
 
     .container {
       max-width: 100%;
-      /*padding: 0 40px;*/
+    }
+
+    .container-text h1 {
+      padding: 80px;
     }
 
     .topnav {
@@ -606,7 +639,6 @@
     .topnav .icon {
       display: block;
       color: #fff;
-      font-size: 32px;
       margin-left: auto;
       cursor: pointer;
     }
@@ -618,31 +650,36 @@
       position: relative;
     }
 
-    .container-text h1 {
-      font-size: 64px;
-      line-height: 1.3;
-    }
-
     .about {
+      padding: 80px 80px;
+      height: auto;
+      background: #fff;
+    }
+
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    .about-left h2 {
+      margin: 0 0 18px;
+      text-align: left;
+    }
+
+    .about-left p {
+      margin: 0;
+      font-size: 18px;
+      max-width: 520px;
+    }
+
+    .about-right img {
       width: 100%;
-      height: auto;
-      padding: 40px;
-      display: flex;
-      gap: 32px;
-      flex-direction: row;
-
+      height: 520px;
+      object-fit: cover;
+      display: block;
     }
-
-    .about img {
-      width: 50%;
-      height: auto;
-      float: none;
-    }
-
-    .about div {
-      width: 55%;
-    }
-
 
     .whatwedo-grid {
       gap: 40px;
